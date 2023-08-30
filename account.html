@@ -26,53 +26,27 @@
                 <button onclick="showCancellationForm()" class="submit-button">cancel your trip</button><br><br>
             
                     <!-- Cancellation Form (hidden by default) -->
-                    <div id="cancellation-form" style="display: none;">
+                    <section id="cancellation-form" style="display: none;">
                         <h2 class="pre-prompt">confirm cancellation</h2>
                         <textarea id="cancellation-reason" placeholder="(optional) why are you cancelling?" style="width: 250px"></textarea><br>
-                        <button onclick="cancelTrip()" style="margin: 20px; background-color:red;" class="submit-button">confirm</button>
-                    </div>
+                        <button onclick="cancelTrip()" class="submit-button">confirm</button>
+                    </section>
             
             
                 <button onclick="showFeedbackForm()" class="submit-button">feedback</button>
                     
             
                     <!-- Feedback Form (hidden by default) -->
-                    <div id="feedback-form" style="display: none;">
+                    <section id="feedback-form" style="display: none;">
                         <h2 class="pre-prompt">provide feedback</h2>
                         <textarea id="feedback-message" placeholder="ex: school isn't listed, dorm isn't listed, etc." style="width: 250px"></textarea><br>
-                        <button onclick="submitFeedback()" style="margin: 20px; background-color:red;" class="submit-button">confirm</button>
-                    </div>
+                        <button onclick="submitFeedback()" class="submit-button">confirm</button>
+                    </section>
                 
                 </section> 
-            
-            
-                <script>
-                    function redirectToPlanPage() {
-                        window.location.href = "plan.html";
-                    }
-            
-                    function showCancellationForm() {
-                        document.getElementById("cancellation-form").style.display = "block";
-                        document.getElementById("feedback-form").style.display = "none";
-                    }
-            
-                    function cancelTrip() {
-                        const reason = document.getElementById("cancellation-reason").value;
-                        alert("Your trip has been canceled. Reason: " + reason);
-                    }
-            
-                    function showFeedbackForm() {
-                        document.getElementById("feedback-form").style.display = "block";
-                        document.getElementById("cancellation-form").style.display = "none";
-                    }
-            
-                    function submitFeedback() {
-                        const feedback = document.getElementById("feedback-message").value;
-                        alert("Thank you for your feedback:\n" + feedback);
-                    }
-                </script>
 
-                    
+                <script src="./js/account.js"></script>
+                
         </main>
 
         <footer>

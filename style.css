@@ -172,3 +172,9 @@ a:-webkit-any-link {
     background-color: #3491FF;
     color: white;
 }
+
+#cancellation-form button.submit-button, #feedback-form button.submit-button {
+    margin: 20px;
+    background-color: red;
+    /* Other button styles */
+}

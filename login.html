@@ -9,37 +9,6 @@
             </title>
     </head>
 
-    <script>
-        let verificationCode = 0;
-
-        function generateVerificationCode() {
-            // Generate a random 6-digit verification code
-            return Math.floor(100000 + Math.random() * 900000);
-        }
-
-        function send_verification_code() {
-            const phoneNumber = document.getElementById("phone").value;
-            verificationCode = generateVerificationCode();
-
-            // In a real application, you would send the verification code to the user's phone
-            // using SMS or another method and handle the verification process.
-            
-            document.getElementById("confirmation-message").style.display = "block";
-            document.getElementById("verification").style.display = "block";
-            document.getElementById("phone-number").style.display = "block";
-                    }
-
-        function verify_code() {
-            const enteredCode = document.getElementById("verification").value;
-            
-            if (parseInt(enteredCode) === verificationCode) {
-                alert("Verification successful!");
-            } else {
-                alert("Verification code is incorrect. Please try again.");
-            }
-        }
-    </script>
-
     <body>
         <header>
             <div class="header">
@@ -48,28 +17,29 @@
         </header>
 
         <main>
-            <form>
+            <form onsubmit="return false;">
                 <h2 class="title">login</h2>
-
-            <section id="phone_number">
-                    <input type="tel" id="phone" class="custom-input" name="phone" placeholder="phone number" pattern="[0-9]{10}" required>
-                    <!-- phone number validation not working here; won't chekc that it's in phone number format-->
-                </section>
         
-            <button type="button" class="submit-button" onclick="send_verification_code()">send code</button>  
-
-            <section id="confirmation-message" style="display: none;">
-                code sent!
-            </section>
+                <section id="phone_number">
+                    <input type="tel" id="phone" class="custom-input" name="phone" placeholder="phone number" pattern="^\d{10}$" required onkeydown="handleKeyPress(event)">
+                </section>
+                
+                <button type="button" class="submit-button" onclick="send_verification_code()">send code</button>  
+        
+                <section id="confirmation-message" style="display: none;">
+                    code sent!
+                </section>
             </form>
-            
+                    
             <section id="verification" style="display: none; padding-top: 20px; text-align: center">
-                <input type="text" id="verificaiton_code" name="verificaiton_code" placeholder="verification code" required>
+                <input type="text" id="verification_code" name="verification_code" placeholder="verification code" required onkeydown="handleKeyPress(event)">
                 <br>
                 <button type="button" class="submit-button" onclick="verify_code()">sign in</button>
             </section>
-
+        
+            <script src="./js/login.js"> </script>
         </main>
+        
 
         <footer>
             <hr>
