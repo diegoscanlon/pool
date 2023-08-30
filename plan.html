@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltf">
+
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>
+            Pool ✈️ | plan
+            </title>
+        </head>
+
+    <body>
+        <header>
+            <div class="header">
+            <a href="./about.html" class="about-reference">Pool ✈️</a>
+                </div>
+        </header>
+        
+        <main>
+
+            <section id="plan">
+                <form action="./confirm.html" method="POST">
+                    <h2 class="title">enter plans</h2>
+            
+                    <section id="select_direction">
+                        <select name="direction" id="direction" class="custom-select" required onchange="update_plan_options()">
+                            <option value="" disabled selected>select direction</option>
+                            <option value="toairport">school to airport</option>
+                            <option value="toschool">airport to school</option>
+                        </select>
+                    </section>
+
+                    <section id="dorm" style="display: none;">
+                        <select name="dormID" id="dormID" class="custom-select" required>
+                            <option value="" disabled selected>select dorm</option>
+                            <option value="North">North</option>
+                            <option value="Max P">Max P</option>
+                            <option value="Snell-Hitchcock">Snell-Hitchcock</option>
+                            <option value="South">South</option>
+                            <option value="Woodlawn">Woodlawn</option>
+                            <option value="iHouse">iHouse</option>
+                        </select>
+                    </section>
+            
+                    <section id="airport" style="display: none;">
+                        <select name="airportID" id="airportID" class="custom-select" required>
+                            <option value="" disabled selected>select airport</option>
+                            <option value="Midway">Midway</option>
+                            <option value="O'Hare">O'Hare</option>
+                        </select>
+                    </section>
+            
+                    <section id="from_dorm_time" style="display: none;">
+                        <label for="from_dorm_time" class="pre-prompt">Leaving the <b>dorm</b> at this time:</label><br>
+                        <select name="from_dorm_time" id="from_dorm_time" class="custom-select" required>
+                            <option value="00:00">12:00 AM</option>
+                            <option value="00:30">12:30 AM</option>
+                            <option value="01:00">01:00 AM</option>
+                            <option value="01:30">01:30 AM</option>
+                            <option value="02:00">02:00 AM</option>
+                            <option value="02:30">02:30 AM</option>
+                            <option value="03:00">03:00 AM</option>
+                            <option value="03:30">03:30 AM</option>
+                            <option value="04:00">04:00 AM</option>
+                            <option value="04:30">04:30 AM</option>
+                            <option value="05:00">05:00 AM</option>
+                            <option value="05:30">05:30 AM</option>
+                            <option value="06:00">06:00 AM</option>
+                            <option value="06:30">06:30 AM</option>
+                            <option value="07:00">07:00 AM</option>
+                            <option value="07:30">07:30 AM</option>
+                            <option value="08:00">08:00 AM</option>
+                            <option value="08:30">08:30 AM</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="09:30">09:30 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="10:30">10:30 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="11:30">11:30 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="12:30">12:30 PM</option>
+                            <option value="13:00">01:00 PM</option>
+                            <option value="13:30">01:30 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="14:30">02:30 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="15:30">03:30 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="16:30">04:30 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                            <option value="17:30">05:30 PM</option>
+                            <option value="18:00">06:00 PM</option>
+                            <option value="18:30">06:30 PM</option>
+                            <option value="19:00">07:00 PM</option>
+                            <option value="19:30">07:30 PM</option>
+                            <option value="20:00">08:00 PM</option>
+                            <option value="20:30">08:30 PM</option>
+                            <option value="21:00">09:00 PM</option>
+                            <option value="21:30">09:30 PM</option>
+                            <option value="22:00">10:00 PM</option>
+                            <option value="22:30">10:30 PM</option>
+                            <option value="23:00">11:00 PM</option>
+                            <option value="23:30">11:30 PM</option>
+                        </select>
+                    </section>
+            
+                    <section id="to_airport_date" style="display: none;">
+                        <label for="to_airport_date" class="pre-prompt">On this date:</label><br>
+                        <input type="date" id="to_airport_date" name="to_airport_date" class="custom-select" required>
+                    </section>
+
+                    <section id="flight-number-section" style="display: none;">
+                        <input type="text" id="flight_number" class="custom-input" name="flight_number" placeholder="flight number" required>
+                    </section>
+
+                    <section id="flight-date-section" style="display: none;">
+                        <label for="flight_date" class="pre-prompt">On this date:</label><br>
+                        <input type="date" id="flight_date" name="flight_date" class="custom-select" required>
+                    </section>
+                    
+            
+                    <button type="submit" class="submit-button">Confirm</button>
+                </form>
+            </section>
+            
+            
+            <script>
+                function update_plan_options() {
+                    var directionSelect = document.getElementById("direction");
+                    var airportSection = document.getElementById("airport");
+                    var dormSection = document.getElementById("dorm");
+                    var timeSection = document.getElementById("from_dorm_time");
+                    var dateSection = document.getElementById("to_airport_date");
+                    var toSchoolSection = document.getElementById("flight-number-section");
+                    var dateToSchoolSection = document.getElementById("flight-date-section");
+                    
+                    // Reset required attribute for all input elements
+                    var inputElements = document.querySelectorAll("#plan input, #plan select");
+                    inputElements.forEach(function(element) {
+                        element.removeAttribute("required");
+                    });
+            
+                    if (directionSelect.value === "toairport") {
+                        airportSection.style.display = "block";
+                        dormSection.style.display = "block";
+                        timeSection.style.display = "block";
+                        dateSection.style.display = "block";
+                        toSchoolSection.style.display = "none";
+                        dateToSchoolSection.style.display = "none";
+                        
+                        document.getElementById("airportID").setAttribute("required", "required");
+                        document.getElementById("dormID").setAttribute("required", "required");
+                        document.getElementById("from_dorm_time").setAttribute("required", "required");
+                        document.getElementById("to_airport_date").setAttribute("required", "required");
+                    } else if (directionSelect.value === "toschool") {
+                        toSchoolSection.style.display = "block";
+                        dateToSchoolSection.style.display = "block";
+                        dormSection.style.display = "none";
+                        airportSection.style.display = "none";
+                        timeSection.style.display = "none";
+                        dateSection.style.display = "none";
+            
+                        document.getElementById("flight_number").setAttribute("required", "required");
+                        document.getElementById("flight_date").setAttribute("required", "required");
+                    } else {
+                        airportSection.style.display = "none";
+                        timeSection.style.display = "none";
+                        dateSection.style.display = "none";
+                        toSchoolSection.style.display = "none";
+                        dateToSchoolSection.style.display = "none";
+                        dormSection.style.display = "none";
+                    }
+                }
+                
+                // Call the function initially and set up the event listener for changes
+                document.getElementById("direction").addEventListener("change", update_plan_options);
+                update_plan_options();
+            </script>
+
+        </main>
+
+        <footer>
+            <hr>
+        <nav>
+            <a href="./index.html">how / what</a> <br>
+            <a href="./feedback.html">feedback</a> <br>
+            <a href="./about.html">about us</a>
+            </nav>
+        <p class="created": 0>by Diego and Pranav @ UChicago</p>
+        </footer>
+
+    </body>
+    </html>
+        
