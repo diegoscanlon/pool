@@ -21,17 +21,32 @@
                 <h2 style="text-align: center;">account</h2>
                 </section>
 
+            <p>Trip details:<br>
+                Leaving <b>Max P</b> at <b>2:30pm</b> on <b>Sept 21</b> for <b>O'Hare airport</b>.
+            </p>
+
             <section id="account-options" style="text-align: center;">
                 <button onclick="redirectToPlanPage()" class="submit-button">plan your trip</button><br><br>
-                <button onclick="showCancellationForm()" class="submit-button">cancel your trip</button><br><br>
+
+                <button onclick="showNewMatchForm()" class="submit-button">find new match</button><br><br>
+
+                <!-- New Match Form (hidden by default) -->
+                <section id="new-match-form" style="display: none;">
+                    <h2 class="pre-prompt">confirm new match</h2>
+                    <textarea id="new-match-reason" placeholder="why do you want a new match?" style="width: 250px"></textarea><br>
+                    <button onclick="newMatch()" class="submit-button">find new match</button>
+                    <!--- need to implement newMatch; unmatches current, finds new -->
+                </section>
+
+
+                <button onclick="showCancellationForm()" class="submit-button">cancel trip</button><br><br>
             
                     <!-- Cancellation Form (hidden by default) -->
                     <section id="cancellation-form" style="display: none;">
                         <h2 class="pre-prompt">confirm cancellation</h2>
-                        <textarea id="cancellation-reason" placeholder="(optional) why are you cancelling?" style="width: 250px"></textarea><br>
+                        <textarea id="cancellation-reason" placeholder="why are you cancelling?" style="width: 250px"></textarea><br>
                         <button onclick="cancelTrip()" class="submit-button">confirm</button>
                     </section>
-            
             
                 <button onclick="showFeedbackForm()" class="submit-button">feedback</button>
                     
@@ -39,14 +54,14 @@
                     <!-- Feedback Form (hidden by default) -->
                     <section id="feedback-form" style="display: none;">
                         <h2 class="pre-prompt">provide feedback</h2>
-                        <textarea id="feedback-message" placeholder="ex: school isn't listed, dorm isn't listed, etc." style="width: 250px"></textarea><br>
+                        <textarea id="feedback-message" placeholder="ex: school isn't listed, dorm isn't listed, feature requests." style="width: 250px"></textarea><br>
                         <button onclick="submitFeedback()" class="submit-button">confirm</button>
                     </section>
                 
                 </section> 
 
                 <script src="./js/account.js"></script>
-                
+
         </main>
 
         <footer>

@@ -53,6 +53,7 @@
                     <section id="from_dorm_time" style="display: none;">
                         <label for="from_dorm_time" class="pre-prompt">Leaving the <b>dorm</b> at this time:</label><br>
                         <select name="from_dorm_time" id="from_dorm_time" class="custom-select" required>
+                            <option value="" disabled selected>select time</option>
                             <option value="00:00">12:00 AM</option>
                             <option value="00:30">12:30 AM</option>
                             <option value="01:00">01:00 AM</option>
@@ -133,13 +134,13 @@
                     var dateSection = document.getElementById("to_airport_date");
                     var toSchoolSection = document.getElementById("flight-number-section");
                     var dateToSchoolSection = document.getElementById("flight-date-section");
-                    
+
                     // Reset required attribute for all input elements
                     var inputElements = document.querySelectorAll("#plan input, #plan select");
                     inputElements.forEach(function(element) {
                         element.removeAttribute("required");
                     });
-            
+
                     if (directionSelect.value === "toairport") {
                         airportSection.style.display = "block";
                         dormSection.style.display = "block";
@@ -147,7 +148,7 @@
                         dateSection.style.display = "block";
                         toSchoolSection.style.display = "none";
                         dateToSchoolSection.style.display = "none";
-                        
+
                         document.getElementById("airportID").setAttribute("required", "required");
                         document.getElementById("dormID").setAttribute("required", "required");
                         document.getElementById("from_dorm_time").setAttribute("required", "required");
@@ -159,16 +160,21 @@
                         airportSection.style.display = "none";
                         timeSection.style.display = "none";
                         dateSection.style.display = "none";
-            
+
                         document.getElementById("flight_number").setAttribute("required", "required");
                         document.getElementById("flight_date").setAttribute("required", "required");
                     } else {
+                        // For default or invalid direction values, ensure required attributes are set accordingly
                         airportSection.style.display = "none";
+                        dormSection.style.display = "none";
                         timeSection.style.display = "none";
                         dateSection.style.display = "none";
                         toSchoolSection.style.display = "none";
                         dateToSchoolSection.style.display = "none";
-                        dormSection.style.display = "none";
+
+                        // Depending on your form requirements, you might want to set required attributes here too.
+                        // For example, if you want to enforce that users choose a direction before submitting:
+                        // directionSelect.setAttribute("required", "required");
                     }
                 }
                 

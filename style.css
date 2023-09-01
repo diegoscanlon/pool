@@ -42,10 +42,14 @@ p {
     font-family: 'Gill Sans';
 }
 
-.custom-input, input[type="text"], input[type="email"], input[type="tel"], .custom-select {
-    width: 242px;
-    height: 35px;
-    margin-bottom: 20px;
+.custom-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+.custom-select {
+    width: 250px; /* Set the width to the same value for all elements */
+    height: 40px; /* Set the height to the same value for all elements */
+    margin-bottom: 10px;
     border-radius: 10px;
     border: 2px solid #000;
     background: #FFF;
@@ -108,21 +112,6 @@ p {
     color: #000000;
 }
 
-.custom-select {
-    width: 250px;
-    height: 40px;
-    margin-bottom: 20px;
-
-    border-radius: 10px;
-    border: 2px solid #000;
-    background: #ffffff;
-
-    font-family: 'Gill Sans';
-    font-size: 20px;
-    color: #000000;
-    text-align: center;
-}
-
 .created {
     padding: 0px;
     text-align: right
@@ -173,7 +162,7 @@ a:-webkit-any-link {
     color: white;
 }
 
-#cancellation-form button.submit-button, #feedback-form button.submit-button {
+#cancellation-form button.submit-button, #feedback-form button.submit-button, #new-match-form button.submit-button {
     margin: 20px;
     background-color: red;
     /* Other button styles */
