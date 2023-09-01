@@ -42,13 +42,25 @@ p {
     font-family: 'Gill Sans';
 }
 
-.custom-input,
-input[type="text"],
-input[type="email"],
-input[type="tel"],
 .custom-select {
     width: 250px; /* Set the width to the same value for all elements */
     height: 40px; /* Set the height to the same value for all elements */
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background: #FFF;
+    font-family: 'Gill Sans';
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.custom-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"]{
+    width: 242px; /* Set the width to the same value for all elements */
+    height: 34px; /* Set the height to the same value for all elements */
     margin-bottom: 10px;
     border-radius: 10px;
     border: 2px solid #000;
@@ -75,30 +87,6 @@ input[type="tel"],
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-}
-
-.directional-button {
-    border-radius: 10px;
-    border: 2px solid #000;
-    background: #3491FF;
-    margin: 20px;
-    padding: 10px 50px;
-
-    cursor: pointer;
-
-    color: #FFF;
-    text-align: center;
-    font-family: 'Gill Sans';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-decoration: none;
-}
-
-.directional-button:hover {
-    background: #1d83ff;
-    cursor: pointer;
 }
 
 .submit-button:hover{
