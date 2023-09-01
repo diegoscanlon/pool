@@ -18,23 +18,23 @@
 
         <main>
             
-            <section id="account">
+            <div id="account">
                 <form action="plan.html" method="POST">
                     <h2 class="title">sign up</h2>
 
-                    <section id="account">
+                    <div id="account">
                         <input type="text" id="username" class="custom-input" name="username" placeholder="name" required>
-                    </section>
+                    </div>
 
-                    <section id="phone">
+                    <div id="phone">
                         <input type="tel" id="pnumber" class="custom-input" name="pnumber" placeholder="US phone number" pattern="[0-9]{10}" required>
-                    </section>
+                    </div>
 
-                    <section id="email">
+                    <div id="email">
                         <input type="email" id="email" class="custom-input" name="email" placeholder="school email" required>
-                    </section>
+                    </div>
 
-                    <section id="selectschool">
+                    <div id="selectschool">
                         <select name="school" id="school" class="custom-select" required>
                             <option value="school" disabled selected style="color: #525252;">school</option>
                             <option value="noSchool">Don't See My School</option>
@@ -65,7 +65,7 @@
                             <option value="WashU">WashU</option>
                             <option value="Yale">Yale</option>
                         </select>
-                    </section>
+                    </div>
 
                     <button type="submit" class="submit-button">continue to plan</button>
                 </form>

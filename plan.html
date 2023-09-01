@@ -18,19 +18,19 @@
         
         <main>
 
-            <section id="plan">
+            <div id="plan">
                 <form action="./confirm.html" method="POST">
                     <h2 class="title">enter plans</h2>
             
-                    <section id="select_direction">
+                    <div id="select_direction">
                         <select name="direction" id="direction" class="custom-select" required onchange="update_plan_options()">
                             <option value="" disabled selected>select direction</option>
                             <option value="toairport">school to airport</option>
                             <option value="toschool">airport to school</option>
                         </select>
-                    </section>
+                    </div>
 
-                    <section id="dorm" style="display: none;">
+                    <div id="dorm" style="display: none;">
                         <select name="dormID" id="dormID" class="custom-select" required>
                             <option value="" disabled selected>select dorm</option>
                             <option value="North">North</option>
@@ -40,17 +40,17 @@
                             <option value="Woodlawn">Woodlawn</option>
                             <option value="iHouse">iHouse</option>
                         </select>
-                    </section>
+                    </div>
             
-                    <section id="airport" style="display: none;">
+                    <div id="airport" style="display: none;">
                         <select name="airportID" id="airportID" class="custom-select" required>
                             <option value="" disabled selected>select airport</option>
                             <option value="Midway">Midway</option>
                             <option value="O'Hare">O'Hare</option>
                         </select>
-                    </section>
+                    </div>
             
-                    <section id="from_dorm_time" style="display: none;">
+                    <div id="from_dorm_time" style="display: none;">
                         <label for="from_dorm_time" class="pre-prompt">Leaving the <b>dorm</b> at this time:</label><br>
                         <select name="from_dorm_time" id="from_dorm_time" class="custom-select" required>
                             <option value="" disabled selected>select time</option>
@@ -103,26 +103,26 @@
                             <option value="23:00">11:00 PM</option>
                             <option value="23:30">11:30 PM</option>
                         </select>
-                    </section>
+                    </div>
             
-                    <section id="to_airport_date" style="display: none;">
+                    <div id="to_airport_date" style="display: none;">
                         <label for="to_airport_date" class="pre-prompt">On this date:</label><br>
                         <input type="date" id="to_airport_date" name="to_airport_date" class="custom-select" required>
-                    </section>
+                    </div>
 
-                    <section id="flight-number-section" style="display: none;">
+                    <div id="flight-number-section" style="display: none;">
                         <input type="text" id="flight_number" class="custom-input" name="flight_number" placeholder="flight number" required>
-                    </section>
+                    </div>
 
-                    <section id="flight-date-section" style="display: none;">
+                    <div id="flight-date-section" style="display: none;">
                         <label for="flight_date" class="pre-prompt">On this date:</label><br>
                         <input type="date" id="flight_date" name="flight_date" class="custom-select" required>
-                    </section>
+                    </div>
                     
             
                     <button type="submit" class="submit-button">Confirm</button>
                 </form>
-            </section>
+            </div>
             
             
             <script>

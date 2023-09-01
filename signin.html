@@ -20,22 +20,22 @@
             <form onsubmit="return false;">
                 <h2 class="title">login</h2>
         
-                <section id="phone_number">
+                <div id="phone_number">
                     <input type="tel" id="phone" class="custom-input" name="phone" placeholder="phone number" pattern="^\d{10}$" required onkeydown="handleKeyPress(event)">
-                </section>
+                </div>
                 
                 <button type="button" class="submit-button" onclick="send_verification_code()">send code</button>  
         
-                <section id="confirmation-message" style="display: none;">
+                <div id="confirmation-message" style="display: none;">
                     code sent!
-                </section>
+                </div>
             </form>
                     
-            <section id="verification" style="display: none; padding-top: 20px; text-align: center">
+            <div id="verification" style="display: none; padding-top: 20px; text-align: center">
                 <input type="text" id="verification_code" name="verification_code" placeholder="verification code" required onkeydown="handleKeyPress(event)">
                 <br>
                 <button type="button" class="submit-button" onclick="verify_code()">sign in</button>
-            </section>
+            </div>
         
             <script src="./js/signin.js"> </script>
         </main>
