@@ -10,24 +10,50 @@
         </head>
 
     <body>
-        <header>
-            <div class="header">
-            <a href="./about.html" class="about-reference">Pool ✈️</a>
-                </div>
-        </header>
-        
-        <main>
 
-            <div id="confirmation">
+        <main>
+            <div class="header">
+                <a href="./about.html" class="about-reference">Pool ✈️</a>
+            </div>
+            
+            <h2 class="title" style="margin: 20px;">Confirmed! <br>
+                A match is coming soon!</h2>
+
+            <div id="confirmation-message">
+            <p>
+                Leaving Max P<br>
+                Going to Midway<br>
+                12:30pm on August 12<br><br>
+                *if you have a new account, please confirm the email verification that has been sent.<br><br>
+                <b>More information about how this works <a href="./index.html">here.</a></b>
+            </p>
+            </div>
+
+            <!--
+
+            <div id="talking-preference-form">
+                <form style="text-align: left; margin: 20px;">
+                <label for="talking-preference-form"><b>Talking Preference (optional):</b></label><br>
+                <select name="talking-preference" id="talking-preference" class="custom-select">
+                    <option value="" disabled selected>select (optional)</option>
+                    <option value="North">prefer a conversation</option>
+                    <option value="Max P">prefer a quiet ride</option>
+                </select>
+                <br>
+                <button type="submit" class="small-button-blue" style="margin-left: 0px;">confirm</button>
+            </form>
             </div>
 
             <div id="confirmation-feedback-form" style="margin: 20px">
-                <textarea id="feedback-message" placeholder="where did you hear about us?" style="width: 300px; height: 50px"></textarea>
-                    <br><br>
-                <button onclick="submitFeedback()" class="submit-button">send feedback</button>
+                <label for="confirmation-feedback-form"><b>Feedback (optional):</b></label><br>
+                <textarea id="feedback-message" placeholder="where did you hear about us?" style="width: 300px; height: 50px; margin: 5px 0px;"></textarea>
+                    <br>
+                <button onclick="submitFeedback()" class="small-button-blue" style="margin-left: 0px;">confirm</button>
             </div>
             
             <script src="./js/feedback.js"></script>
+            -->
+
         </main>
 
         <footer>
@@ -37,7 +63,6 @@
             <a href="./feedback.html">feedback</a> <br>
             <a href="./about.html">about us</a>
             </nav>
-        <p class="created": 0>by Diego and Pranav @ UChicago</p>
         </footer>
 
     </body>

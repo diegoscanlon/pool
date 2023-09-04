@@ -11,14 +11,17 @@
     </head>
 
     <body>
-        <header>
-            <div class="header">
-            <a href="./about.html" class="about-reference">Pool ✈️</a>
-                </div>
-        </header>
+
+        <div class="banner">
+            <p>Join now to save on Back to School rides!</p>
+        </div>
 
         <main>
-            <h2 style="margin: 20px;">provide feedback</h2>
+            <div class="header">
+                <a href="./about.html" class="about-reference">Pool ✈️</a>
+            </div>
+
+            <h2>provide feedback</h2>
 
             <p>
                 do we not have your school or your dorm listed?<br>
@@ -26,13 +29,26 @@
                 feature requests? <br>
             </p>
 
-            <div id="feedback-form-page" style="margin: 20px;">
+            <div id="feedback-form-page">
                 <textarea id="feedback-message" placeholder="ex: school isn't listed, dorm isn't listed, etc." style="width: 300px; height: 50px"></textarea>
                     <br><br>
                 <button onclick="submitFeedback()" class="submit-button">confirm</button>
             </div>
+    
+            <h2>report</h2>
 
-            <script src="./js/feedback.js"></script>
+            <p>
+                please report any incident here. <br>
+                immediate action will be taken. <br>
+                non-payment, harassment of any kind, etc. <br>
+            </p>
+
+            <div id="report-form">
+                <textarea id="report-reason" placeholder="please include name and contact information" style="width: 300px; height: 50px"></textarea><br>
+                <button onclick="submitReport()" class="submit-button" style="margin-left: 0px">report</button>
+            </div>
+
+            <script src="./js/account.js"></script>
 
         </main>
 
@@ -44,7 +60,6 @@
             <a href="./feedback.html">feedback</a> <br>
             <a href="./about.html">about us</a>
             </nav>
-        <p class="created": 0>by Diego and Pranav @ UChicago</p>
         </footer>
 
     </body>
