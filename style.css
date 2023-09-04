@@ -14,7 +14,7 @@ body {
 }
 
 main {
-    padding: 4% 7% 0% 7%;
+    margin: 4% 7% 0% 7%;
 }
 
 select {
@@ -22,8 +22,8 @@ select {
 }
 
 footer {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
     margin-top: auto;
     text-align: left;
 }
