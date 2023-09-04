@@ -54,7 +54,7 @@ p {
 }
 
 .custom-select {
-    width: 200px; /* Set the width to the same value for all elements */
+    width: 225px; /* Set the width to the same value for all elements */
     height: 40px; /* Set the height to the same value for all elements */
     margin-bottom: 10px;
     border-radius: 10px;
@@ -70,7 +70,7 @@ p {
 input[type="text"],
 input[type="email"],
 input[type="tel"]{
-    width: 200px; /* Set the width to the same value for all elements */
+    width: 225px; /* Set the width to the same value for all elements */
     height: 40px; /* Set the height to the same value for all elements */
     margin-bottom: 10px;
     border-radius: 10px;
@@ -87,7 +87,7 @@ input[type="tel"]{
     border: 2px solid #000;
     background: #0080FE;
 
-    width: 200px;
+    width: 225px;
     height: 40px; 
     cursor: pointer;
 
