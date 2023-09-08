@@ -196,6 +196,18 @@ input[type="tel"]{
     text-align: center;
 }
 
-#plan-form, #sign-in-form, #sign-up-form {
+#plan-form, #sign-in-form, #sign-up-form, #account-options {
     text-align: center;
+}
+
+#cancellation-button, #new-match-button {
+    margin-bottom: 20px; 
+    margin-top: 10px; 
+    background-color: white; 
+    color: rgb(8,36,76);
+}
+
+#report-feedback-button a, #plan-trip-button a { /* on account page */
+    text-decoration: none;
+    color: inherit;
 }
