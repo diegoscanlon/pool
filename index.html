@@ -61,11 +61,52 @@
                 </div>
 
                 <div id="onboard-buttons">
+                    <form action="plan.html" method="POST">
+                    <div id="phone">
+                        <input type="tel" id="pnumber" class="custom-input" name="pnumber" placeholder="US phone number" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <div id="selectschool">
+                        <select name="school" id="school" class="custom-select" required>
+                            <option value="" disabled selected>school</option>
+                            <option value="noSchool">Don't See My School</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Caltech">Caltech</option>
+                            <option value="Columbia">Columbia</option>
+                            <option value="Cornell">Cornell</option>
+                            <option value="Dartmouth">Dartmouth</option>
+                            <option value="Duke">Duke</option>
+                            <option value="Emory">Emory</option>
+                            <option value="Georgetown">Georgetown</option>
+                            <option value="Harvard">Harvard</option>
+                            <option value="JohnsHopkins">Johns Hopkins</option>
+                            <option value="UMich">UMich</option>
+                            <option value="MIT">MIT</option>
+                            <option value="Northwestern">Northwestern</option>
+                            <option value="NotreDame">Notre Dame</option>
+                            <option value="UPenn">UPenn</option>
+                            <option value="Princeton">Princeton</option>
+                            <option value="Rice">Rice</option>
+                            <option value="Stanford">Stanford</option>
+                            <option value="Berkeley">UC Berkeley</option>
+                            <option value="Chicago">UChicago</option>
+                            <option value="UCLA">UCLA</option>
+                            <option value="USC">USC</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Vanderbilt">Vanderbilt</option>
+                            <option value="WashU">WashU</option>
+                            <option value="Yale">Yale</option>
+                        </select>
+                    </div>
+
                         <a href="./signup.html" class="small-button" id="signup-button">sign up</a>
                         <a href="./signin.html" class="small-button"id="signin-button" >login</a>
-                </div> 
-
-                <a href="#how-it-works" class="scroll-link">How it works<br>⌄</a>
+                
+                    <button type="submit" class="submit-button">join waitlist</button>
+                    </form>
+                    <br><br><br>
+                    <a href="#how-it-works" class="scroll-link">How it works<br>⌄</a>
+                </div>
             </div>
 
         </section>
