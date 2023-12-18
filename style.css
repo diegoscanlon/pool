@@ -108,6 +108,33 @@ section {
     color: rgb(8,36,76);
 }
 
+.decision-button{
+    border-radius: 15px;
+
+    width: 175px;
+    height: 40px; 
+    cursor: pointer;
+
+    color: #FFF;
+    text-align: center;
+    font-family: 'Gill Sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#decline-match {
+    background: rgb(255, 73, 73);
+    border: 2px solid rgb(255, 73, 73);
+
+}
+#accept-match {
+    background: rgb(57, 255, 57);
+    border: 2px solid rgb(57, 255, 57);
+
+}
+
 #statement h1{
     font-size: 32px;
     color: rgb(8,36,76);
@@ -122,8 +149,8 @@ section {
 
 .scroll-link {
     position: absolute;
-    bottom: -170px; /* Adjust the distance from the bottom as needed */
-    left: 50%; /* Center horizontally within the section */
+    bottom: -100px;  /*  Adjust the distance from the bottom as needed */
+    left: 50%;  /* Center horizontally within the section */
     transform: translateX(-50%);
     font-size: 20px;
     color: black;
@@ -142,7 +169,7 @@ a:-webkit-any-link {
     text-align: center;
 }
 
-#about-us-content a{
+#about-us-content, #email-confirmation a{
     color: white;
 }
 

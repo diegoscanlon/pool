@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="icon" type="image/x-icon" href="./icon.png">
         <title>
-            Pool | index
+            Pool | account
             </title>
     </head>
 
@@ -54,60 +54,29 @@
 
 
         <section>
-            <div class="content">
-                <div id="statement">
-                    <h1>Save money on your airport rideshares.</h1>
-                    <p><b>Share and split rides</b> to and from airports with your classmates who have similar travel dates, times, and destinations.</p>
+            <div id="account-options" class="content">
+                <div class="box" style="margin-bottom: 20px;">
+                    <h2>Hi Diego!</h2>
+
+                <p>
+                    <b>STATUS:</b> As soon as we've found a potential match, we will text you with instructions to review their profile and confirm them as a match. <br><br>More <a href="#how-it-works">here.</a>
+                </p>
+
+                <p>
+                    <b>PLANS: </b>
+                    <ul>
+                        <li>Leaving Max P</li> <!-- Departure Location-->
+                        <li>at 12:30pm on August 12</li> <!-- Departure Time and Date-->
+                        <li>Going to Midway</li> <!-- Destination Location-->
+                    </ul>
+                </p>
+
+
+                <button class="submit-button" id="report-feedback-button"><a href="./feedback.html">report / feedback</a></button><br><br>
+
                 </div>
 
-                <div id="onboard-buttons" style="padding-left: 0px; margin-right: 0px;">
-                    <button id="fakeWaitlistSubmit" class="submit-button" onclick="showWaitlistForm()">join waitlist</button>
-
-                    <form action="https://storage.googleapis.com/example-pool-bucket" method="post" enctype="multipart/form-data">
-                        <div id="enterPhone" style="display: none;">
-                            <input type="tel" id="pnumber" class="custom-input" name="pnumber" placeholder="US phone number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
-                        </div>
-
-                        <div id="selectSchool" style="display: none;">
-                            <select name="school" id="school" class="custom-select" required>
-                                <option value="" disabled selected>school</option>
-                                <option value="noSchool">Don't See My School</option>
-                                <option value="Brown">Brown</option>
-                                <option value="Caltech">Caltech</option>
-                                <option value="Columbia">Columbia</option>
-                                <option value="Cornell">Cornell</option>
-                                <option value="Dartmouth">Dartmouth</option>
-                                <option value="Duke">Duke</option>
-                                <option value="Emory">Emory</option>
-                                <option value="Georgetown">Georgetown</option>
-                                <option value="Harvard">Harvard</option>
-                                <option value="JohnsHopkins">Johns Hopkins</option>
-                                <option value="UMich">UMich</option>
-                                <option value="MIT">MIT</option>
-                                <option value="Northwestern">Northwestern</option>
-                                <option value="NotreDame">Notre Dame</option>
-                                <option value="UPenn">UPenn</option>
-                                <option value="Princeton">Princeton</option>
-                                <option value="Rice">Rice</option>
-                                <option value="Stanford">Stanford</option>
-                                <option value="Berkeley">UC Berkeley</option>
-                                <option value="Chicago">UChicago</option>
-                                <option value="UCLA">UCLA</option>
-                                <option value="USC">USC</option>
-                                <option value="Virginia">Virginia</option>
-                                <option value="Vanderbilt">Vanderbilt</option>
-                                <option value="WashU">WashU</option>
-                                <option value="Yale">Yale</option>
-                            </select>
-                        </div>
-                        
-                        <button id="realWaitlistSubmit" type="submit" class="submit-button" style="display: none;">join waitlist</button>
-                    </form>
-                    
-                    <a href="#how-it-works" class="scroll-link">How it works<br>⌄</a>
-                    
-                </div>
-            </div>
+                <script src="./js/account.js"></script>
 
         </section>
             
@@ -145,22 +114,20 @@
         <section>
         <div class="content" id="about-us">
 
-            <a href="#statement" class="scroll-link" style="top: -170px">^<br>Sign up</a>
+            <a href="#account-options" class="scroll-link" style="top: -170px">^<br>Account</a>
             
             <div class="box" id="about-us-content">
                 <p>
                     Save your money for the things you love. <br><br>
                     
-                    <a href="./comingsoon.html">sign up</a> • <a href="./comingsoon.html">account</a><br>
+                    <a href="./signup.html">sign up</a> • <a href="./account.html">account</a><br>
                     <a href="#how-it-works">how / what</a> • <a href="./feedback.html">feedback</a> <br><br>                  
 
-                by Diego Scanlon and Pranav Padmanabhan<br>
+                by Diego Scanlon and Pranav Padmanahvan<br>
                     @ UChicago in 2023</p>
             </div>
         </div>
         </section>
-
-        <script src="./js/index.js"></script>
         
     </body>
 </main>
